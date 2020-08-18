@@ -1,0 +1,3 @@
+class OrderMenuItemsController < ApplicationController
+    
+end
