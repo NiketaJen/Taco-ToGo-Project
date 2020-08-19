@@ -1,0 +1,41 @@
+.MenuCollection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 30px;
+  grid-column-gap: 0px;
+  margin: 30px;
+}
+
+.Order {
+  margin: 30px;
+}
+
+.MainPage {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.MenuImage img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ui card {
+  max-height: 475px;
+  height: 475px;
+  align-content: center;
+}
+
+.HeaderImage {
+  object-fit: cover;
+}
+
+.LoginIcon {
+  float: right;
+  overflow: auto;
+}
+
+.Logo {
+  float: center;
+}
