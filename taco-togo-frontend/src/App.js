@@ -5,6 +5,7 @@ import OrderMenuCard from "./components/OrderMenuCard";
 import MenuCollection from "./components/MenuCollection";
 import "./App.css";
 import Order from "./components/Order";
+import Login from "./components/Login";
 
 class App extends React.Component {
   state = {
@@ -33,6 +34,19 @@ class App extends React.Component {
     });
   };
 
+  // loggedIn = () => {
+  //   let newBoolean = !this.state.displayLogin;
+  //   this.setState({
+  //     displayLogin: newBoolean,
+  //   });
+  // };
+
+  isLoggedIn = () => {
+    console.log("did i get here");
+    let loggedIn = localStorage.getItem("loggedIn");
+    return loggedIn;
+  };
+
   removeItem = (item) => {
     item.added = !item.added;
     const orderItemsCopy = [...this.state.orderItems];
@@ -45,10 +59,11 @@ class App extends React.Component {
   };
 
   render() {
-    return (
+    return !this.isLoggedIn() ? (
+      <Login />
+    ) : (
       <div className="App">
-
-        <HeaderContent />
+        <HeaderContent isLoggedIn={this.isLoggedIn} />
 
         <div className="MainPage">
           <MenuCollection

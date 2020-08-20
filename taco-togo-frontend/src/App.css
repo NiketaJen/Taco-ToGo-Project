@@ -31,7 +31,7 @@
   object-fit: cover;
 }
 
-.LoginIcon {
+.LogoutIcon {
   float: right;
   overflow: auto;
 }
@@ -57,14 +57,12 @@
 }
 
 .SignUpPage {
-  padding-top:10%;
-  padding-left:33%;
-  padding-right: 33%; 
-
+  padding-top: 10%;
+  padding-left: 33%;
+  padding-right: 33%;
 }
 
 .SignUpForm {
-  padding-left:33%;
-  padding-right: 33%; 
-
+  padding-left: 33%;
+  padding-right: 33%;
 }
