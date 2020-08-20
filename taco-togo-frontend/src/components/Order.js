@@ -7,7 +7,6 @@ import OrderMenuCard from "../components/OrderMenuCard";
 
 class Order extends React.Component {
   render() {
-    const total = this.props.orderItems.reduce((a, b) => a + b.price, 0);
     return (
       <div className="Order">
         <Card>
@@ -17,15 +16,18 @@ class Order extends React.Component {
           <Card.Content>
             {this.props.orderItems.map((item) => (
               <OrderMenuCard
+                orderItems={this.props.orderItems}
                 item={item}
                 key={item.id}
                 removeItem={this.props.removeItem}
+                addOne={this.props.addOne}
               />
             ))}
           </Card.Content>
 
           <Card.Content>
-            Total: ${total}
+            Total: $
+            {this.props.orderItems.reduce((a, c) => a + c.price * c.qty, 0)}
             <div align="right">
               <Button positive onClick={() => this.props.checkOut()}>
                 Checkout{" "}
