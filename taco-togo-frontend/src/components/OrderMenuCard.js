@@ -18,7 +18,9 @@ class OrderMenuCard extends React.Component {
               <Button.Group size="mini">
                 <Button positive>Edit</Button>
                 <Button.Or />
-                <Button>Remove</Button>
+                <Button onClick={() => this.props.removeItem(item)}>
+                  Remove
+                </Button>
               </Button.Group>
             </Feed.Content>
             <div>
