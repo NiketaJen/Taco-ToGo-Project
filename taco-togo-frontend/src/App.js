@@ -1,12 +1,9 @@
 import React from "react";
 import Footer from "./components/Footer";
-// import Header from "./components/Header";
+import HeaderContent from "./components/HeaderContent";
 import OrderMenuCard from "./components/OrderMenuCard";
 import MenuCollection from "./components/MenuCollection";
 import "./App.css";
-import { Header, Image, Segment } from "semantic-ui-react";
-import { Icon, Label } from "semantic-ui-react";
-import Logo from "./Logo.png";
 import Order from "./components/Order";
 
 class App extends React.Component {
@@ -32,22 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header as="h2" attached="top">
-          <div className="HeaderImage">
-            <Image src="https://pbs.twimg.com/media/DQtcoZvUQAAWqMy?format=jpg&name=medium" />
-          </div>
-        </Header>
-        <Segment attached>
-          <div className="Logo">
-            <img src={"https://i.imgur.com/Xh1dQoG.png"} alt="Logo" />
-          </div>
-          <div className="LoginIcon" onClick={this.handleClick}>
-            <Label as="login">
-              <Icon name="user outline" />
-              Log in
-            </Label>
-          </div>
-        </Segment>
+        <HeaderContent />
         <div className="MainPage">
           <MenuCollection
             menuItems={this.state.menuItems}
