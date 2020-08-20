@@ -10,6 +10,8 @@ class App extends React.Component {
   state = {
     menuItems: [],
     orderItems: [],
+    display: false,
+    paymentSuccess: false,
   };
 
   componentDidMount() {
@@ -24,18 +26,43 @@ class App extends React.Component {
     this.setState({ orderItems });
   };
 
-  checkOut = () => {};
+  checkOut = () => {
+    let newBoolean = !this.state.display;
+    this.setState({
+      display: newBoolean,
+    });
+  };
+
+  removeItem = (item) => {
+    item.added = !item.added;
+    const orderItemsCopy = [...this.state.orderItems];
+    const orderItems = orderItemsCopy.filter((i) => i.id !== item.id);
+    this.setState({ orderItems });
+  };
+
+  submitPayment = () => {
+    this.setState({ paymentSuccess: true });
+  };
 
   render() {
     return (
       <div className="App">
+
         <HeaderContent />
+
         <div className="MainPage">
           <MenuCollection
             menuItems={this.state.menuItems}
             addToOrder={this.addToOrder}
+            display={this.state.display}
+            submitPayment={this.submitPayment}
+            paymentSuccess={this.state.paymentSuccess}
           />
-          <Order orderItems={this.state.orderItems} checkOut={this.checkOut} />
+          <Order
+            orderItems={this.state.orderItems}
+            checkOut={this.checkOut}
+            removeItem={this.removeItem}
+          />
         </div>
       </div>
     );
