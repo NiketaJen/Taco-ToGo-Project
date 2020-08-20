@@ -23,6 +23,7 @@ class App extends React.Component {
 
   addToOrder = (e, item) => {
     item.added = true;
+    item.qty = 1;
     const orderItems = [...this.state.orderItems, item];
     this.setState({ orderItems });
   };
@@ -58,6 +59,20 @@ class App extends React.Component {
     this.setState({ paymentSuccess: true });
   };
 
+  addOne = (item) => {
+    const orderItems = [
+      ...this.state.orderItems.map((taco) => {
+        const copyTaco = { ...taco };
+        if (taco.id === item.id) {
+          copyTaco.qty += 1;
+        }
+        return copyTaco;
+      }),
+    ];
+
+    this.setState({ orderItems });
+  };
+
   render() {
     return !this.isLoggedIn() ? (
       <Login />
@@ -77,6 +92,7 @@ class App extends React.Component {
             orderItems={this.state.orderItems}
             checkOut={this.checkOut}
             removeItem={this.removeItem}
+            addOne={this.addOne}
           />
         </div>
       </div>
