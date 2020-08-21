@@ -18,10 +18,12 @@ const HeaderContent = (props) => {
         </div>
       </Header>
       <Segment attached>
-        <div className="Subheader">
-          <div className="Logo">
-            <img src={"https://i.imgur.com/Xh1dQoG.png"} alt="Logo" />
-          </div>
+        <div className="Subheader" >
+            <div className="Logo" >
+              <img src={"https://i.imgur.com/P29HX27.png"} alt="Logo" />
+            </div>
+            
+          
           <div className="LogoutIcon">
             <Button onClick={() => loggedOut()} as="logout">
               <Icon name="user outline" />

@@ -36,16 +36,25 @@
   overflow: auto;
 }
 
-.Logo {
-  display: block;
+ .Logo {
+  /* max-height: 475px;
+  height: 475px; */
+  align-content: center;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-}
+} 
 
 .Subheader {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-}
+  max-height: 10%;
+  height: 10%;
+  align-content: center; */
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+} 
 
 .Checkout {
   display: flex;
@@ -54,6 +63,9 @@
 .LoginPageContainer {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #DCF2E8;
 }
 
 .LoginPage {
@@ -76,6 +88,63 @@
 }
 
 .Title {
+  font-size: 45px;
+  color: black;
+  font-family: 'Fredoka One', cursive;
+  display:flex;
   justify-content: center;
   align-content: center;
+}
+
+.Welcome {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  background-size: cover;
+}
+
+.Greeting {
+  font-size: 75px;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  align-content: center;
+  
+  margin: auto;
+  width: 50%;
+  
+  padding: 100px;
+}
+
+.WelcomeButton {
+  align-content: center;
+  margin: auto;
+ 
+  width: 50%;
+  padding-left: 200px;
+  padding-right: 350px;
+  /* padding: 100px; */
+}
+
+.Address{
+  
+  display: flex;
+  margin: 50px;
+  padding-left: 100px;
+  padding-right:100px;
+  justify-content: center;
+}
+
+.SignUpForm {
+  height: 100vh;
+  width: 100vw;
+  background-color: #DCF2E8;
+
+}
+
+.Create {
+  font-size: 50px;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 100px;
 }
