@@ -51,12 +51,12 @@
   display: flex;
 }
 
-.SignUpPageContainer {
+.LoginPageContainer {
   display: flex;
   justify-content: center;
 }
 
-.SignUpPage {
+.LoginPage {
   padding-top: 10%;
   padding-left: 33%;
   padding-right: 33%;
@@ -65,4 +65,17 @@
 .SignUpForm {
   padding-left: 33%;
   padding-right: 33%;
+}
+
+.LoginButton {
+  color: #34BF70;
+}
+
+.LocationInfo {
+  object-fit: cover;
+}
+
+.Title {
+  justify-content: center;
+  align-content: center;
 }

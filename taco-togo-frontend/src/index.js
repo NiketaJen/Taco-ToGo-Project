@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "semantic-ui-css/semantic.min.css";
-import SignUp from "./components/SignUp";
+import Login from "./components/Login";
 import SignUpForm from "./components/SignUpForm";
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -12,7 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Route path="/signupform" component={SignUpForm} />
-      <Route path="/signup" component={SignUp} />
+      <Route path="/login" component={Login} />
       <Route path="/" exact component={App} />
     </BrowserRouter>
   </React.StrictMode>,
