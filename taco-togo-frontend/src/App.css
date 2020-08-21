@@ -10,6 +10,11 @@
   margin: 30px;
 }
 
+.SomeButtons {
+  display: flex;
+  justify-content: center;
+}
+
 .MainPage {
   display: grid;
   grid-template-columns: 5fr 1fr;

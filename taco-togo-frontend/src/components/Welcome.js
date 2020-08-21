@@ -13,7 +13,9 @@ const Welcome = (props) => {
       }}
     >
       <div className="Greeting">
-        <p>Welcome To Taco ToGo!</p>
+        <p>
+          Welcome To <br></br> Taco ToGo!
+        </p>
       </div>
       <div className="WelcomeButton">
         <Button.Group size="big">
