@@ -21,7 +21,12 @@ class OrderMenuCard extends React.Component {
                   trigger={<Button positive>Edit</Button>}
                   content={
                     <Button.Group>
-                      <Button circular color="red" icon="minus" />
+                      <Button
+                        circular
+                        color="red"
+                        icon="minus"
+                        onClick={() => this.props.removeOne(item)}
+                      />
                       <Button
                         circular
                         color="green"

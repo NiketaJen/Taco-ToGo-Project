@@ -21,6 +21,7 @@ class Order extends React.Component {
                 key={item.id}
                 removeItem={this.props.removeItem}
                 addOne={this.props.addOne}
+                removeOne={this.props.removeOne}
               />
             ))}
           </Card.Content>
@@ -28,8 +29,13 @@ class Order extends React.Component {
           <Card.Content>
             Total: $
             {this.props.orderItems.reduce((a, c) => a + c.price * c.qty, 0)}
+            <div align="left">
+              <Button negative onClick={() => this.props.deleteOrder()}>
+                Cancel{" "}
+              </Button>
+            </div>
             <div align="right">
-              <Button positive onClick={() => this.props.checkOut()}>
+              <Button positive onClick={() => this.props.showConfirmation()}>
                 Checkout{" "}
               </Button>
             </div>
