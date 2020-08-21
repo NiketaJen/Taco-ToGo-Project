@@ -32,7 +32,16 @@ const SignUpForm =(props) => {
       
    
         return(
-            <div className="SignUpForm"><h1>Create An Account</h1>
+            <div className="SignUpForm">
+                <br>
+                </br>
+                <div className="Create">
+                    <p>Create An Account</p>
+                </div>
+          <br>
+          </br>
+          <br>
+          </br>
              <Form onSubmit={handleSubmit}>
                 <Form.Field>
                 <label> Name</label>
@@ -60,6 +69,8 @@ const SignUpForm =(props) => {
                 
                 <Button type='submit'>Submit</Button>
             </Form>
+           
+            
             </div>
         ) 
 }

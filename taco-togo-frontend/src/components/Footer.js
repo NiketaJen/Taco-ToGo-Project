@@ -57,24 +57,27 @@ const locations = {
           </br>
           <br>
           </br>
-        <Grid reversed='computer' columns='equal'>
-          <Grid.Row>
-            <Grid.Column>
-              <h4>Truck Yard Houston</h4>
-              <p>2118 Lamar St.</p>
-              <p>Houston, TX 77003</p> 
-              <em>Tuesdays, Thursdays, Saturdays</em>
-              <p><em>3:00pm - until</em></p>
-              </Grid.Column>
-            <Grid.Column>
-              <h4>Galleria Food Truck Park</h4>
-              <p>2829 Chimney Rock Rd</p>
-              <p>Houston, TX 77056</p> 
-              <em>Mondays, Wednesdays, Fridays</em>
-              <p><em>12:00pm - 5:00pm</em></p>
-              </Grid.Column>
-          </Grid.Row>
-          </Grid>
+          <div className="Address">
+            <Grid reversed='computer' columns='equal'>
+            <Grid.Row>
+              <Grid.Column>
+                <h4>Truck Yard Houston</h4>
+                <p>2118 Lamar St.</p>
+                <p>Houston, TX 77003</p> 
+                <em>Tuesdays, Thursdays, Saturdays</em>
+                <p><em>3:00pm - until</em></p>
+                </Grid.Column>
+              <Grid.Column>
+                <h4>Galleria Food Truck Park</h4>
+                <p>2829 Chimney Rock Rd</p>
+                <p>Houston, TX 77056</p> 
+                <em>Mondays, Wednesdays, Fridays</em>
+                <p><em>12:00pm - 5:00pm</em></p>
+                </Grid.Column>
+            </Grid.Row>
+            </Grid>
+          </div>
+       
        
 
       </div>
