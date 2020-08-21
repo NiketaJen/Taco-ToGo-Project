@@ -13,6 +13,7 @@ class App extends React.Component {
     orderItems: [],
     display: false,
     paymentSuccess: false,
+    confirmationDisplay: false,
   };
 
   componentDidMount() {
@@ -23,6 +24,7 @@ class App extends React.Component {
 
   addToOrder = (e, item) => {
     item.added = true;
+    item.qty = 1;
     const orderItems = [...this.state.orderItems, item];
     this.setState({ orderItems });
   };
@@ -31,7 +33,12 @@ class App extends React.Component {
     let newBoolean = !this.state.display;
     this.setState({
       display: newBoolean,
+      confirmationDisplay: !this.state.confirmationDisplay,
     });
+  };
+
+  goBack = () => {
+    this.setState({ confirmationDisplay: !this.state.confirmationDisplay });
   };
 
   // loggedIn = () => {
@@ -58,6 +65,46 @@ class App extends React.Component {
     this.setState({ paymentSuccess: true });
   };
 
+  addOne = (item) => {
+    const orderItems = [
+      ...this.state.orderItems.map((taco) => {
+        const copyTaco = { ...taco };
+        if (taco.id === item.id) {
+          copyTaco.qty += 1;
+        }
+        return copyTaco;
+      }),
+    ];
+
+    this.setState({ orderItems });
+  };
+
+  removeOne = (item) => {
+    const orderItems = [
+      ...this.state.orderItems.map((taco) => {
+        const copyTaco = { ...taco };
+        if (taco.id === item.id && copyTaco.qty > 0) {
+          copyTaco.qty -= 1;
+        }
+        return copyTaco;
+      }),
+    ];
+
+    this.setState({ orderItems });
+  };
+
+  showConfirmation = () => {
+    let newBoolean = !this.state.confirmationDisplay;
+    this.setState({
+      confirmationDisplay: newBoolean,
+    });
+  };
+
+  deleteOrder = () => {
+    const orderItems = [];
+    this.setState({ orderItems });
+  };
+
   render() {
     return !this.isLoggedIn() ? (
       <Welcome />
@@ -72,11 +119,20 @@ class App extends React.Component {
             display={this.state.display}
             submitPayment={this.submitPayment}
             paymentSuccess={this.state.paymentSuccess}
+            confirmationDisplay={this.state.confirmationDisplay}
+            showConfirmation={this.props.showConfirmation}
+            checkOut={this.checkOut}
+            goBack={this.goBack}
           />
           <Order
             orderItems={this.state.orderItems}
             checkOut={this.checkOut}
             removeItem={this.removeItem}
+            addOne={this.addOne}
+            removeOne={this.removeOne}
+            confirmationDisplay={this.state.confirmationDisplay}
+            showConfirmation={this.showConfirmation}
+            deleteOrder={this.deleteOrder}
           />
           <Footer/>
         </div>
