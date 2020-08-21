@@ -1,8 +1,5 @@
 import React from "react";
-import Login from "../components/Login";
-import SignUp from "../components/SignUp";
 import { Card, Button } from "semantic-ui-react";
-
 import OrderMenuCard from "../components/OrderMenuCard";
 
 class Order extends React.Component {

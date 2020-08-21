@@ -5,7 +5,7 @@ import OrderMenuCard from "./components/OrderMenuCard";
 import MenuCollection from "./components/MenuCollection";
 import "./App.css";
 import Order from "./components/Order";
-import Login from "./components/Login";
+import Welcome from "./components/Welcome";
 
 class App extends React.Component {
   state = {
@@ -60,7 +60,7 @@ class App extends React.Component {
 
   render() {
     return !this.isLoggedIn() ? (
-      <Login />
+      <Welcome />
     ) : (
       <div className="App">
         <HeaderContent isLoggedIn={this.isLoggedIn} />
@@ -78,6 +78,7 @@ class App extends React.Component {
             checkOut={this.checkOut}
             removeItem={this.removeItem}
           />
+          <Footer/>
         </div>
       </div>
     );
