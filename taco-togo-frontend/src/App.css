@@ -21,6 +21,16 @@
   object-fit: cover;
 }
 
+.MessageHeader {
+  text-align: center;
+  color: black;
+}
+
+.CheckOrBack {
+  display: flex;
+  justify-content: center;
+}
+
 .ui card {
   max-height: 475px;
   height: 475px;
@@ -80,7 +90,7 @@
 }
 
 .LoginButton {
-  color: #34BF70;
+  color: #34bf70;
 }
 
 .LocationInfo {
@@ -95,6 +105,8 @@
   justify-content: center;
   align-content: center;
 }
+
+
 
 .Welcome {
   position: fixed;
@@ -148,3 +160,4 @@
   font-family: 'Open Sans', sans-serif;
   margin-top: 100px;
 }
+

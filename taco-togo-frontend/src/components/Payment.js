@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Form, Icon, Message, Label } from "semantic-ui-react";
+import {
+  Button,
+  Form,
+  Menu,
+  Dropdown,
+  Message,
+  Label,
+} from "semantic-ui-react";
 
 class Payment extends React.Component {
   render() {
@@ -11,6 +18,9 @@ class Payment extends React.Component {
             Your order will be ready for pickup in <b>15 minutes</b>.
           </p>
         </Message>
+        <Button color="gray" onClick={() => this.props.restart()}>
+          Go Back
+        </Button>
       </div>
     ) : (
       <div className="Payment">
@@ -20,10 +30,16 @@ class Payment extends React.Component {
           </Label>
         </div>
         <Form className="attached fluid segment">
+          <Form.Input
+            fluid
+            label="Name for Order"
+            placeholder="Tesla"
+            type="text"
+          />
           <Form.Group widths="equal">
             <Form.Input
               fluid
-              label="Name"
+              label="Name on Card"
               placeholder="Antonio Reid"
               type="text"
             />
