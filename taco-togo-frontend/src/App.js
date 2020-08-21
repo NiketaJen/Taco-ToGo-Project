@@ -37,10 +37,6 @@ class App extends React.Component {
     });
   };
 
-  goBack = () => {
-    this.setState({ confirmationDisplay: !this.state.confirmationDisplay });
-  };
-
   // loggedIn = () => {
   //   let newBoolean = !this.state.displayLogin;
   //   this.setState({
@@ -62,7 +58,7 @@ class App extends React.Component {
   };
 
   submitPayment = () => {
-    this.setState({ paymentSuccess: true });
+    this.setState({ paymentSuccess: true, orderItems: [] });
   };
 
   addOne = (item) => {
@@ -102,7 +98,27 @@ class App extends React.Component {
 
   deleteOrder = () => {
     const orderItems = [];
-    this.setState({ orderItems });
+    const menuItems = [...this.state.menuItems];
+    menuItems.map((item) => (item.added = false));
+    this.setState({ orderItems, menuItems });
+  };
+
+  cancelOrder = () => {
+    const orderItems = [];
+    const menuItems = [...this.state.menuItems];
+    menuItems.map((item) => (item.added = false));
+    this.setState({
+      orderItems,
+      menuItems,
+      confirmationDisplay: !this.state.confirmationDisplay,
+    });
+  };
+
+  restart = () => {
+    this.setState({ display: false });
+    const menuItems = [...this.state.menuItems];
+    menuItems.map((item) => (item.added = false));
+    this.setState({ menuItems });
   };
 
   render() {
@@ -122,7 +138,8 @@ class App extends React.Component {
             confirmationDisplay={this.state.confirmationDisplay}
             showConfirmation={this.props.showConfirmation}
             checkOut={this.checkOut}
-            goBack={this.goBack}
+            cancelOrder={this.cancelOrder}
+            restart={this.restart}
           />
           <Order
             orderItems={this.state.orderItems}
@@ -134,7 +151,7 @@ class App extends React.Component {
             showConfirmation={this.showConfirmation}
             deleteOrder={this.deleteOrder}
           />
-          <Footer/>
+          <Footer />
         </div>
       </div>
     );

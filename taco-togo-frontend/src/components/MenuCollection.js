@@ -6,22 +6,38 @@ import { Message, Button } from "semantic-ui-react";
 class MenuCollection extends React.Component {
   render() {
     return this.props.confirmationDisplay ? (
-      <Message info>
-        <Message.Header>
-          Confirm your Order and Checkout or Go Back
+      <Message
+        style={{
+          opacity: 0.8,
+          backgroundImage: "url('https://i.imgur.com/bHHntQm.jpg')",
+        }}
+      >
+        <Message.Header
+          className="MessageHeader"
+          style={{ fontSize: "30px", margin: "30px" }}
+        >
+          Confirm your Order and Checkout or Cancel
         </Message.Header>
-        <Button.Group>
-          <Button positive onClick={() => this.props.checkOut()}>
-            Checkout
-          </Button>
-          <Button.Or />
-          <Button onClick={() => this.props.goBack()}>Go Back</Button>
-        </Button.Group>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className="CheckOrBack">
+          <Button.Group size="massive">
+            <Button positive onClick={() => this.props.checkOut()}>
+              Checkout
+            </Button>
+            <Button.Or />
+            <Button negative onClick={() => this.props.cancelOrder()}>
+              Cancel Order
+            </Button>
+          </Button.Group>
+        </div>
       </Message>
     ) : this.props.display ? (
       <Payment
         submitPayment={this.props.submitPayment}
         paymentSuccess={this.props.paymentSuccess}
+        restart={this.props.restart}
       />
     ) : (
       <div className="MenuCollection">
