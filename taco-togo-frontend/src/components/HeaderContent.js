@@ -1,6 +1,5 @@
 import React from "react";
 import { Header, Image, Segment, Icon, Button } from "semantic-ui-react";
-
 import { useHistory } from "react-router";
 
 const HeaderContent = (props) => {
