@@ -26,14 +26,20 @@ class Order extends React.Component {
           <Card.Content>
             Total: $
             {this.props.orderItems.reduce((a, c) => a + c.price * c.qty, 0)}
-            <div align="left">
-              <Button negative onClick={() => this.props.deleteOrder()}>
-                Cancel{" "}
-              </Button>
-            </div>
-            <div align="right">
-              <Button positive onClick={() => this.props.showConfirmation()}>
+            <div className="SomeButtons">
+              <Button
+                positive
+                align="right"
+                onClick={() => this.props.showConfirmation()}
+              >
                 Checkout{" "}
+              </Button>
+              <Button
+                negative
+                align="left"
+                onClick={() => this.props.deleteOrder()}
+              >
+                Cancel{" "}
               </Button>
             </div>
           </Card.Content>

@@ -52,10 +52,7 @@ class Payment extends React.Component {
           </Form.Group>
           <Form.Input label="Expiration Date" placeholder="12/23" type="text" />
           <Form.Input label="CVC" placeholder="222" type="text" />
-          <Form.Checkbox
-            inline
-            label="I agree to allowing you to charge my card for $100,000,000.00"
-          />
+          <Form.Checkbox inline label="I accept the Terms and Conditions." />
           <Button color="blue" onClick={() => this.props.submitPayment()}>
             Process Payment
           </Button>
