@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "../css/SignUpForm.css";
 import { Button, Form } from 'semantic-ui-react'
 import { useHistory } from "react-router";
 

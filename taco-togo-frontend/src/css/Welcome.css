@@ -1,0 +1,51 @@
+.Welcome {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    /* font-size: 75px; */
+    /* color: white; */
+    font-family: 'Fredoka One', cursive;
+    /* align-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 100px; */
+  }
+
+  .greeting__LineOne {
+    font-size: 75px; 
+    font-weight: 700;
+    padding-bottom: 30px;
+
+  }
+
+  .greeting__LineTwo {
+    font-size: 75px; 
+    font-weight: 700;
+    padding-top: 30px;
+}
+  
+  .WelcomeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* margin: auto;
+    width: 50%;
+    padding-left: 200px;
+    padding-right: 350px; */
+    /* padding: 100px; */
+  }

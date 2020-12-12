@@ -1,0 +1,22 @@
+.LocationInfo {
+    object-fit: cover;
+  }
+  
+  .Title {
+    font-size: 45px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  
+  .Address{
+    
+    display: flex;
+    margin: 50px;
+    padding-left: 100px;
+    padding-right:100px;
+    justify-content: center;
+  }

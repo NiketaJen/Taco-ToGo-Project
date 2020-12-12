@@ -1,0 +1,18 @@
+.SignUpForm {
+    height: 100vh;
+    width: 100vw;
+    background-color: #DCF2E8;
+  
+  }
+  
+  .SignUpForm {
+    padding-left: 33%;
+    padding-right: 33%;
+  }
+  
+  .Create {
+    font-size: 50px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 100px;
+  }

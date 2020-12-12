@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/MenuCard.css";
 import { Card, Icon, Image, Button, Popup } from "semantic-ui-react";
 
 class MenuCard extends React.Component {

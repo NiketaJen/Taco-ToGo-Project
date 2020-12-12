@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/MenuCollection.css";
 import MenuCard from "../components/MenuCard";
 import Payment from "../components/Payment";
 import { Message, Button } from "semantic-ui-react";

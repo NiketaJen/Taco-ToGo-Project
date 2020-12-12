@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/HeaderContent.css";
 import { Header, Image, Segment, Icon, Button } from "semantic-ui-react";
 import { useHistory } from "react-router";
 
