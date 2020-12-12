@@ -1,4 +1,9 @@
 
+.SomeButtons {
+  display: flex;
+  justify-content: center;
+}
+
 .MainPage {
   display: grid;
   grid-template-columns: 5fr 1fr;
@@ -10,9 +15,13 @@
   align-content: center;
 }
 
+
 .Checkout {
   display: flex;
 }
+
+
+
 
 
 
