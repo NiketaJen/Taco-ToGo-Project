@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "../css/Footer.css";
 import { Grid} from 'semantic-ui-react'
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps"
 

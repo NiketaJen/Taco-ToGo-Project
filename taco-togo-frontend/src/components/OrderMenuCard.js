@@ -1,5 +1,5 @@
 import React from "react";
-import Order from "../components/Order";
+import "../css/OrderMenuCard.css";
 import { Card, Feed, Button, Popup, Header } from "semantic-ui-react";
 
 class OrderMenuCard extends React.Component {

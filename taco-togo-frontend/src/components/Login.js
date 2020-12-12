@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Login.css";
 import { Button, Divider, Form, Grid, Segment } from "semantic-ui-react";
 import { useHistory } from "react-router";
 

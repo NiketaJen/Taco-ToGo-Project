@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Order.css";
 import { Card, Button } from "semantic-ui-react";
 import OrderMenuCard from "../components/OrderMenuCard";
 

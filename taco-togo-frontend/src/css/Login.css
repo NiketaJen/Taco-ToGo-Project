@@ -1,0 +1,17 @@
+.LoginPageContainer {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #DCF2E8;
+  }
+
+.LoginPage {
+    padding-top: 10%;
+    padding-left: 33%;
+    padding-right: 33%;
+  }
+
+  .LoginButton {
+    color: #34bf70;
+  }

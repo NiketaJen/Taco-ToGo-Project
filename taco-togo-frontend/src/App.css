@@ -1,14 +1,3 @@
-.MenuCollection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 30px;
-  grid-column-gap: 0px;
-  margin: 30px;
-}
-
-.Order {
-  margin: 30px;
-}
 
 .SomeButtons {
   display: flex;
@@ -20,145 +9,29 @@
   grid-template-columns: 5fr 1fr;
 }
 
-.MenuImage img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.MessageHeader {
-  text-align: center;
-  color: black;
-}
-
-.CheckOrBack {
-  display: flex;
-  justify-content: center;
-}
-
 .ui card {
   max-height: 475px;
   height: 475px;
   align-content: center;
 }
 
-.HeaderImage {
-  object-fit: cover;
-  padding-left: 20%;
-}
-
-.LogoutIcon {
-  float: right;
-  overflow: auto;
-}
-
-.Logo {
-  /* max-height: 475px;
-  height: 475px; */
-  align-content: center;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.Subheader {
-  /* display: flex;
-  justify-content: center;
-  max-height: 10%;
-  height: 10%;
-  align-content: center; */
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .Checkout {
   display: flex;
 }
 
-.LoginPageContainer {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #dcf2e8;
-}
 
-.LoginPage {
-  padding-top: 10%;
-  padding-left: 33%;
-  padding-right: 33%;
-}
 
-.SignUpForm {
-  padding-left: 33%;
-  padding-right: 33%;
-}
 
-.LoginButton {
-  color: #34bf70;
-}
 
-.LocationInfo {
-  object-fit: cover;
-}
 
-.Title {
-  font-size: 45px;
-  color: black;
-  font-family: "Fredoka One", cursive;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
 
-.Welcome {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
 
-.Greeting {
-  font-size: 75px;
-  color: white;
-  font-family: "Fredoka One", cursive;
-  text-align: center;
 
-  margin: auto;
-  width: 50%;
 
-  padding: 100px;
-}
 
-.WelcomeButton {
-  align-content: center;
-  margin: auto;
 
-  width: 50%;
-  padding-left: 390px;
-  padding-right: 350px;
-  /* padding: 100px; */
-}
 
-.Address {
-  display: flex;
-  margin: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
-  justify-content: center;
-}
 
-.SignUpForm {
-  height: 100vh;
-  width: 100vw;
-  background-color: #dcf2e8;
-}
 
-.Create {
-  font-size: 50px;
-  color: black;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 100px;
-}
+

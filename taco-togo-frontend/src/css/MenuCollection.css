@@ -1,0 +1,17 @@
+.MessageHeader {
+    text-align: center;
+    color: black;
+  }
+  
+  .CheckOrBack {
+    display: flex;
+    justify-content: center;
+  }
+
+  .MenuCollection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+    grid-column-gap: 0px;
+    margin: 30px;
+  }
