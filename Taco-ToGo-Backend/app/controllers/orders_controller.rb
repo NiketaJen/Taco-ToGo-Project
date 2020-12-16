@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
             @order.save
             render json: @order
         else
-            render json: {messge: 'something went wrong, try again'}
+            render json: {error: 'Something went wrong, try again'}
         end
     end
 
