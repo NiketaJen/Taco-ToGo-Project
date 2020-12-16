@@ -1,29 +1,28 @@
 class UsersController < ApplicationController
-    
-    def index
-        users = User.all
-        render json: users
-    end
 
     def show
         user = User.find_by(id: params['id'])
         if user
             render json: user
         else
-            render json: {message: 'User Not Found'}
+            render json: {error: 'User Not Found'}, status: :not_acceptable
         end
     end
 
     def create
-        user = User.new(name: params[:name], username: params[:username], password_digest: params[:password_digest])
+        user = User.new(user_params)
         if user.valid?
             user.save
             render json: user
         else
-            render json: {
-                message: user.errors.messages
-            }
+            render json: {error: "Failed to create a user"}, status: :not_acceptable
         end
+    end
+
+    private
+
+    def user_params
+        params.permit(:name, :username, :password)
     end
 
 
