@@ -9,7 +9,7 @@ const SignUpForm =(props) => {
     const [user, createUser ] = useState({
         name: "",
         username: "",
-        password_digest: ""
+        password: ""
     });
 
     let history = useHistory();
@@ -24,7 +24,7 @@ const SignUpForm =(props) => {
             body: JSON.stringify({
               name: user.name,
               username: user.username,
-              password_digest: user.password_digest,
+              password: user.password,
             }),
           })
             .then((res) => res.json())
@@ -63,9 +63,9 @@ const SignUpForm =(props) => {
                 <label>Password</label>
                 <input 
                     placeholder='Password' 
-                    name='password_digest' 
-                    onChange={(e)=> createUser({...user, password_digest: e.target.value})} 
-                    value={user.password_digest}/>
+                    name='password' 
+                    onChange={(e)=> createUser({...user, password: e.target.value})} 
+                    value={user.password}/>
                 </Form.Field>
                 
                 <Button type='submit'>Submit</Button>

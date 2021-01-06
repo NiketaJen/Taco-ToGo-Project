@@ -1,11 +1,10 @@
 import React from "react";
 import Footer from "./components/Footer";
 import HeaderContent from "./components/HeaderContent";
-import OrderMenuCard from "./components/OrderMenuCard";
 import MenuCollection from "./components/MenuCollection";
 import "./App.css";
 import Order from "./components/Order";
-import Welcome from "./components/Welcome";
+
 
 class App extends React.Component {
   state = {
@@ -17,9 +16,14 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/menu_items")
+    fetch("http://localhost:3000/menu_items", {
+      method: "GET", 
+      headers:{
+        Authorization: `Bearer ${localStorage.token}`
+      }
+    })
       .then((res) => res.json())
-      .then((menuItems) => this.setState({ menuItems }));
+      .then((menuItems) => this.setState({ menuItems: menuItems }));
   }
 
   addToOrder = (e, item) => {
@@ -35,19 +39,6 @@ class App extends React.Component {
       display: newBoolean,
       confirmationDisplay: !this.state.confirmationDisplay,
     });
-  };
-
-  // loggedIn = () => {
-  //   let newBoolean = !this.state.displayLogin;
-  //   this.setState({
-  //     displayLogin: newBoolean,
-  //   });
-  // };
-
-  isLoggedIn = () => {
-    console.log("did i get here");
-    let loggedIn = localStorage.getItem("loggedIn");
-    return loggedIn;
   };
 
   removeItem = (item) => {
@@ -122,11 +113,10 @@ class App extends React.Component {
   };
 
   render() {
-    return !this.isLoggedIn() ? (
-      <Welcome />
-    ) : (
+    return (
+     
       <div className="App">
-        <HeaderContent isLoggedIn={this.isLoggedIn} />
+        <HeaderContent  />
 
         <div className="MainPage">
           <MenuCollection
@@ -154,7 +144,7 @@ class App extends React.Component {
           <Footer />
         </div>
       </div>
-    );
+    )
   }
 }
 
